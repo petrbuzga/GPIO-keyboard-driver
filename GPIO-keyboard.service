@@ -1,0 +1,14 @@
+[Unit]
+Description=Ovladac klavesnice pomoci gpio
+StartLimitInternalSec=0
+
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/pi/GPIO-keyboard.py
+
+User=pi
+Restart=always
